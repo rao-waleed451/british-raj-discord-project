@@ -6,10 +6,13 @@
   <title>Discord Server Overview</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
 </head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link rel="stylesheet" href="style.css">
+
 <body>
-  <header>
+  <header class="container">
     <h1>Discord Server Overview</h1>
     <div>
         <ul class="header-second">
@@ -22,17 +25,37 @@
   </header>
 
 
-  <section id="about-me">
-       British Raj Government, Most advanced mechanisms till date in mock government history. Lots of Honors, Ranks, Departments."RAJ" server tag coming soon. New website launching soon. JOIN NOW!!!
+
+
+  <section id="about-me" class="container">
+    <div class="about-main">
+        <p>Empowered by British Raj</p>
+        <h1><span class="icon-crown"><i class="fa-solid fa-crown"></i> </span>Unlock Your Potential → Join British Raj Discord!</h1>
+        <h2>British Raj Discord Server Documentation</h2>
+        <p class="intro">British Raj Government, Most advanced mechanisms till date in mock government history. Lots of Honors, Ranks, Departments."RAJ" server tag coming soon. New website launching soon. JOIN NOW!!!</p>
+        <p>Compiled by: Anton LaVey Supreme of the British Raj</p>
+
+    </div>
+       <!-- British Raj Government, Most advanced mechanisms till date in mock government history. Lots of Honors, Ranks, Departments."RAJ" server tag coming soon. New website launching soon. JOIN NOW!!! -->
+        <div class="custom-shape-divider-bottom-1764943384">
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+        <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+        <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+    </svg>
+</div>
   </section>
+
+
+  
 
   <section id="roles">
     <h2>Roles</h2>
     <div class="role-container">
       <!-- Each role goes here -->
-      <div class="role">Admin</div>
+      <!-- <div class="role">Admin</div>
       <div class="role">Moderator</div>
-      <div class="role">Member</div>
+      <div class="role">Member</div> -->
       <!-- Add dynamically from your document -->
     </div>
   </section>
@@ -41,9 +64,9 @@
     <h2>Channels</h2>
     <div class="channel-container">
       <!-- Each channel goes here -->
-      <div class="channel">#general</div>
+      <!-- <div class="channel">#general</div>
       <div class="channel">#gaming</div>
-      <div class="channel">#voice-chat</div>
+      <div class="channel">#voice-chat</div> -->
     </div>
   </section>
 
@@ -51,7 +74,264 @@
     <p>Made with ❤️ for your Discord server</p>
   </footer>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.15.0/gsap.min.js"></script>
-  <script src="script.js"></script>
+  
+  
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+<!-- 
+import { useState, useEffect } from 'react';
+import { Shield, Hash, Volume2, Lock, Crown, Users, Sparkles } from 'lucide-react';
+
+interface Role {
+  name: string;
+  color: string;
+  icon: string;
+  members: number;
+}
+
+interface Channel {
+  name: string;
+  type: 'text' | 'voice';
+  category: string;
+  locked: boolean;
+}
+
+export default function App() {
+  const [activeTab, setActiveTab] = useState<'roles' | 'channels'>('roles');
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
+  const roles: Role[] = [
+    { name: 'Supreme of the British Raj', color: '#ff0000', icon: '👑', members: 1 },
+    { name: 'Administrator', color: '#ff6b6b', icon: '🛡️', members: 3 },
+    { name: 'Moderator', color: '#4ecdc4', icon: '⚔️', members: 8 },
+    { name: 'Senior Member', color: '#95e1d3', icon: '⭐', members: 15 },
+    { name: 'Verified Member', color: '#5f9ea0', icon: '✓', members: 42 },
+    { name: 'Member', color: '#99b898', icon: '👤', members: 156 },
+    { name: 'Contributor', color: '#fecea8', icon: '💎', members: 23 },
+    { name: 'Bot', color: '#7289da', icon: '🤖', members: 5 },
+    { name: 'New Member', color: '#95a5a6', icon: '🌱', members: 34 },
+  ];
+
+  const channels: Channel[] = [
+    // Text Channels - General
+    { name: 'announcements', type: 'text', category: 'GENERAL', locked: false },
+    { name: 'general', type: 'text', category: 'GENERAL', locked: false },
+    { name: 'introductions', type: 'text', category: 'GENERAL', locked: false },
+    { name: 'rules', type: 'text', category: 'GENERAL', locked: true },
+    
+    // Text Channels - Community
+    { name: 'chat', type: 'text', category: 'COMMUNITY', locked: false },
+    { name: 'memes', type: 'text', category: 'COMMUNITY', locked: false },
+    { name: 'media', type: 'text', category: 'COMMUNITY', locked: false },
+    { name: 'bot-commands', type: 'text', category: 'COMMUNITY', locked: false },
+    
+    // Text Channels - Staff
+    { name: 'staff-chat', type: 'text', category: 'STAFF', locked: true },
+    { name: 'mod-logs', type: 'text', category: 'STAFF', locked: true },
+    { name: 'reports', type: 'text', category: 'STAFF', locked: true },
+    
+    // Voice Channels
+    { name: 'General Voice', type: 'voice', category: 'VOICE', locked: false },
+    { name: 'Music', type: 'voice', category: 'VOICE', locked: false },
+    { name: 'Gaming', type: 'voice', category: 'VOICE', locked: false },
+    { name: 'Staff Voice', type: 'voice', category: 'VOICE', locked: true },
+  ];
+
+  const groupedChannels = channels.reduce((acc, channel) => {
+    if (!acc[channel.category]) {
+      acc[channel.category] = [];
+    }
+    acc[channel.category].push(channel);
+    return acc;
+  }, {} as Record<string, Channel[]>);
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 p-8">
+      <div className={`max-w-6xl mx-auto transition-all duration-1000 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'}`}>
+        {/* Header */}
+        <div className="text-center mb-12 animate-fade-in">
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <Crown className="w-12 h-12 text-yellow-400 animate-bounce" />
+            <h1 className="text-5xl text-white">Server Configuration</h1>
+            <Sparkles className="w-12 h-12 text-purple-400 animate-pulse" />
+          </div>
+          <p className="text-xl text-purple-200">British Raj Discord Server Documentation</p>
+          <p className="text-sm text-purple-300 mt-2">Compiled by: Anton LaVey Supreme of the British Raj</p>
+        </div>
+
+        {/* Tab Navigation */}
+        <div className="flex gap-4 mb-8 bg-slate-800/50 p-2 rounded-xl backdrop-blur-sm">
+          <button
+            onClick={() => setActiveTab('roles')}
+            className={`flex-1 py-4 px-6 rounded-lg transition-all duration-300 flex items-center justify-center gap-2 ${
+              activeTab === 'roles'
+                ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg shadow-purple-500/50 scale-105'
+                : 'bg-slate-700/50 text-gray-300 hover:bg-slate-700'
+            }`}
+          >
+            <Shield className="w-5 h-5" />
+            <span>Server Roles ({roles.length})</span>
+          </button>
+          <button
+            onClick={() => setActiveTab('channels')}
+            className={`flex-1 py-4 px-6 rounded-lg transition-all duration-300 flex items-center justify-center gap-2 ${
+              activeTab === 'channels'
+                ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white shadow-lg shadow-blue-500/50 scale-105'
+                : 'bg-slate-700/50 text-gray-300 hover:bg-slate-700'
+            }`}
+          >
+            <Hash className="w-5 h-5" />
+            <span>Channels ({channels.length})</span>
+          </button>
+        </div>
+
+        {/* Roles Tab */}
+        {activeTab === 'roles' && (
+          <div className="space-y-4">
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-purple-500/30">
+              <h2 className="text-2xl text-white mb-6 flex items-center gap-3">
+                <Shield className="w-7 h-7 text-purple-400" />
+                Role Hierarchy
+              </h2>
+              <div className="space-y-3">
+                {roles.map((role, index) => (
+                  <div
+                    key={role.name}
+                    className="group bg-slate-900/50 p-4 rounded-lg border-l-4 hover:bg-slate-900/80 transition-all duration-300 hover:scale-105 hover:shadow-xl animate-slide-in"
+                    style={{
+                      borderLeftColor: role.color,
+                      animationDelay: `${index * 0.1}s`,
+                    }}
+                  >
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-4">
+                        <span className="text-3xl group-hover:scale-125 transition-transform duration-300">
+                          {role.icon}
+                        </span>
+                        <div>
+                          <h3
+                            className="text-xl transition-all duration-300"
+                            style={{ color: role.color }}
+                          >
+                            {role.name}
+                          </h3>
+                          <p className="text-sm text-gray-400">
+                            Position: {index + 1} of {roles.length}
+                          </p>
+                        </div>
+                      </div>
+                      <div className="flex items-center gap-2 bg-slate-800/80 px-4 py-2 rounded-full">
+                        <Users className="w-4 h-4 text-purple-400" />
+                        <span className="text-white">{role.members}</span>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Channels Tab */}
+        {activeTab === 'channels' && (
+          <div className="space-y-6">
+            {Object.entries(groupedChannels).map(([category, categoryChannels], categoryIndex) => (
+              <div
+                key={category}
+                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-blue-500/30 animate-slide-in"
+                style={{ animationDelay: `${categoryIndex * 0.15}s` }}
+              >
+                <h2 className="text-xl text-blue-300 mb-4 uppercase tracking-wider flex items-center gap-2">
+                  <span className="text-2xl">📁</span>
+                  {category}
+                </h2>
+                <div className="space-y-2">
+                  {categoryChannels.map((channel, index) => (
+                    <div
+                      key={`${category}-${channel.name}`}
+                      className="group bg-slate-900/50 p-3 rounded-lg hover:bg-slate-900/80 transition-all duration-300 hover:translate-x-2 hover:shadow-lg flex items-center justify-between animate-fade-in"
+                      style={{ animationDelay: `${(categoryIndex * 0.15) + (index * 0.05)}s` }}
+                    >
+                      <div className="flex items-center gap-3">
+                        {channel.type === 'text' ? (
+                          <Hash className="w-5 h-5 text-gray-400 group-hover:text-blue-400 transition-colors" />
+                        ) : (
+                          <Volume2 className="w-5 h-5 text-gray-400 group-hover:text-green-400 transition-colors" />
+                        )}
+                        <span className="text-white group-hover:text-blue-300 transition-colors">
+                          {channel.name}
+                        </span>
+                        {channel.locked && (
+                          <Lock className="w-4 h-4 text-yellow-500 animate-pulse" />
+                        )}
+                      </div>
+                      <span className="text-xs text-gray-500 uppercase bg-slate-800 px-2 py-1 rounded">
+                        {channel.type}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+
+        {/* Footer */}
+        <div className="mt-12 text-center text-purple-300 animate-fade-in">
+          <p className="text-sm">
+            Document generated on {new Date().toLocaleDateString('en-GB', {
+              weekday: 'long',
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric',
+            })}
+          </p>
+        </div>
+      </div>
+
+      <style>{`
+        @keyframes slide-in {
+          from {
+            opacity: 0;
+            transform: translateX(-20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+
+        @keyframes fade-in {
+          from {
+            opacity: 0;
+          }
+          to {
+            opacity: 1;
+          }
+        }
+
+        .animate-slide-in {
+          animation: slide-in 0.6s ease-out forwards;
+          opacity: 0;
+        }
+
+        .animate-fade-in {
+          animation: fade-in 1s ease-out forwards;
+        }
+      `}</style>
+    </div>
+  );
+} -->

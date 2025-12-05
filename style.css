@@ -1,3 +1,9 @@
+
+/* <i class="fa-regular fa-wand-magic-sparkles"></i> */  
+
+/* <i class="fa-solid fa-wand-magic-sparkles"></i> dark */
+/* <i class="fa-solid fa-crown"></i> crown */
+
 *{
     padding: 0;
     margin: 0;
@@ -5,11 +11,99 @@
 }
 html {
   scroll-behavior: smooth;
+  background: #8000ff;
+background: linear-gradient(90deg rgba(120, 0, 280, 1) 100%);
+}
+.container{
+    max-width: 1200px;
+    margin: auto;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 50px;
+    align-items: center;
+    color: white;
+    padding: 30px 0px;
 }
 .header-second li,a{
  text-decoration: none;
  list-style: none;
+ color: inherit;
 }
 .header-second{
     display: flex;
+    gap: 70px;
+    margin-right: 50px;
+    font-size: 25px;
+}
+
+#about-me{
+    height: 400px;
+    /* background-color: white; */
+    color: white;
+}
+
+.about-main{
+    padding: 30px;
+    width: 85%;
+}
+
+.about-main p{
+    letter-spacing: 1.8px;
+    word-spacing: 2px;
+    line-height: 50px;
+}
+.about-main h2{
+    color: gold;
+}
+.about-main .intro{
+  letter-spacing: 0;
+    /* word-spacing:10px; */
+    line-height:35px;
+    font-size: 20px;
+    margin: 10px 0px;
+    color: wheat;
+}
+.about-main h1{
+    margin: 20px 0px;
+    color: gold;
+}
+
+.custom-shape-divider-bottom-1764943384 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1764943384 svg {
+    position: relative;
+    display: block;
+    width: calc(127% + 1.3px);
+    height: 215px;
+}
+
+.custom-shape-divider-bottom-1764943384 .shape-fill {
+    fill: #FFFFFF;
+}
+
+
+.icon-crown i {
+  display: inline-block;
+  animation: floatUpDown 2s ease-in-out infinite; /* infinite looping */
+  color: gold;
+}
+
+/* Keyframes for moving up and down */
+@keyframes floatUpDown {
+  0%, 100% {
+    transform: translateY(0);   /* original position */
+  }
+  50% {
+    transform: translateY(-10px); /* moves up by 20px */
+  }
 }
